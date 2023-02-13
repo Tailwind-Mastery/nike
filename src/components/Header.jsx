@@ -1,19 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useHref, useNavigate} from "react-router-dom";
 import logo from '../assets/logo.png'
 
 export default function Header() {
+
+    const href = useHref();
+    const navigate = useNavigate();
+
+    const changeUri = () => {
+        if(href == '#/') {
+            return navigate('/menu/')
+        } else {
+            return navigate('/')
+        }
+    }
+    
     return (
         <div className="2xl:container 2xl:mx-auto">
             <div className="flex justify-between lg:px-10 px-5 py-4 items-center tracking-tight">
-                <div className="">
+
+                <Link to={'/'}>
                     <img src={logo} alt="nike-logo" className="w-16"/>
-                </div>
+                </Link>
+
                 <div className="gap-5 font-medium text-xl hidden lg:flex">
                     <Link to={'/'}>New &amp; Featured</Link>
                     <Link to={'/'}>Men</Link>
                     <Link to={'/'}>Women</Link>
                     <Link to={'/'}>Kids</Link>
                 </div>
+
                 <div className="flex gap-5 items-center">
 
                     {/* search */}
@@ -46,11 +61,12 @@ export default function Header() {
                     </Link>
 
                     {/* menu */}
-                    <Link to={'/'} className="lg:hidden">
+                    <button className="lg:hidden" onClick={changeUri}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-                    </Link>
+                    </button>
+
                 </div>
             </div>
         </div> 
