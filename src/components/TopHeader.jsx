@@ -25,6 +25,7 @@ export default function TopHeader() {
                     <Link to={'/'}>Help</Link>
                     <Link to={'/'}>Join Us</Link>
                     <Link to={'/'}>Sign In</Link>
+                    <Link to={'/newsletter'}>Newsletter</Link>
                 </div>
             </div>
         </div>

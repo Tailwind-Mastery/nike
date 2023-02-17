@@ -84,21 +84,31 @@ export default function MenuLinks() {
                             Town
                         </h3>
                     </Link>
+
                 </div>
 
-                <div className="flex flex-col gap-5 items-center">
+                <div className="flex flex-col gap-5 items-center flex-wrap">
                     <p className="text-xl text-slate-500 md:w-2/4 text-center">
                         Become a Nike Member for the best products, inspiration and stories in sport. <Link to={'/'} className="text-slate-900 font-medium">Learn More</Link>
                     </p>
 
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 flex-wrap justify-center">
                         <Link to={'/'} className="font-medium bg-black text-white rounded-full px-5 py-2 hover:bg-black/90">
                             Join Us
                         </Link>
                         <Link to={'/'} className="font-medium bg-teal-700 text-white rounded-full px-5 py-2 hover:bg-teal-700/90">
                             Sign In
                         </Link>
+                        <Link to={'/newsletter'} className="font-medium rounded-full px-5 py-2 bg-stone-200 flex items-center gap-3">
+                            <p className="font-medium">
+                                Newsletter
+                            </p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </Link>
                     </div>
+
                 </div>
 
                 <div className="flex flex-col gap-5">

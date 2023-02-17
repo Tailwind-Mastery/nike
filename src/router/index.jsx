@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../screens";
 import Menu from "../screens/Menu";
+import Newsletter from "../screens/Newsletter";
 import SubMenu from "../screens/SubMenu";
 
 export default function MainRouter(){
@@ -10,6 +11,7 @@ export default function MainRouter(){
                 <Route path="/" element={<Home />} />
                 <Route path="/menu/" element={<Menu />} />
                 <Route path="/menu/:subMenu" element={<SubMenu />} />
+                <Route path="/newsletter" element={<Newsletter />} />
             </Routes>
         </div>
     )
